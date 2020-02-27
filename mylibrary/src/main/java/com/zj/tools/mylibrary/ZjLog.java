@@ -4,7 +4,7 @@ import android.util.Log;
 /**
  * log工具
  */
-class ZjLog {
+public class ZjLog {
 
     /**
      * 是否开启log(默认情况，debug-开，release-关)
