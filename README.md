@@ -5,16 +5,16 @@
 ```
 // Add it in your root build.gradle at the end of repositories:
 allprojects {
-		repositories {
-			...
-			maven { url 'https://www.jitpack.io' }
-		}
+    repositories {
+	...
+	maven { url 'https://www.jitpack.io' }
+    }
 }
 ```
 ```
 // Add the dependency
 dependencies {
-	        implementation 'com.github.summer-zhoujie:DevUtils:Tag'
+    implementation 'com.github.summer-zhoujie:DevUtils:Tag'
 }
 ```
 ## 内容
