@@ -2,6 +2,9 @@ package com.zj.tools.mylibrary;
 
 import java.lang.reflect.Method;
 
+/**
+ * 隐藏API(@hide修饰)访问工具
+ */
 public class ZjHiddenApiUtil {
     private static Method sSetHiddenApiExemptions;
     private static Object sVMRuntime;
