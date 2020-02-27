@@ -2,7 +2,7 @@ package com.zj.tools.mylibrary;
 
 import java.lang.reflect.Method;
 
-public class HiddenApiUtil {
+public class ZjHiddenApiUtil {
     private static Method sSetHiddenApiExemptions;
     private static Object sVMRuntime;
 
