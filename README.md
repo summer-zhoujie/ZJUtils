@@ -2,7 +2,7 @@
 开发工具包集合
 
 ## 使用
-```
+```gradle
 // Add it in your root build.gradle at the end of repositories:
 allprojects {
     repositories {
@@ -11,7 +11,7 @@ allprojects {
     }
 }
 ```
-```
+```gradle
 // Add the dependency
 dependencies {
     implementation 'com.github.summer-zhoujie:DevUtils:Tag'
