@@ -1,16 +1,33 @@
 package com.zj.tools.mylibrary;
+
 import android.util.Log;
 
 /**
  * log工具
  */
-public class ZjLog {
+public class ZJLog {
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // variables
 
     /**
      * 是否开启log(默认情况，debug-开，release-关)
      */
-    public static boolean enable = BuildConfig.DEBUG;
-    private static final String TAG = "=summerzhou=";
+    private static boolean enable = false;
+    private static String TAG = "ZJLog";
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // out-func
+
+    public static void init(Boolean enable) {
+        ZJLog.enable = enable;
+    }
+
+    public static void init(Boolean enable, String tag) {
+        ZJLog.enable = enable;
+        ZJLog.TAG = tag;
+    }
 
     public static void d(String tag, String msg) {
         if (!enable) {
@@ -27,6 +44,10 @@ public class ZjLog {
         String stackInfo = getStackInfo();
         Log.d(TAG, stackInfo + msg);
     }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // in-func
 
     private static String getStackInfo() {
         String[] infos = new String[]{"", "", ""};
