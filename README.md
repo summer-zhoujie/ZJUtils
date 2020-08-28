@@ -18,5 +18,6 @@ dependencies {
 }
 ```
 ## 内容
-1. 隐藏API(@hide修饰)访问工具 --ZjHiddenApiUtil
-2. Log工具 --ZjLog
+1. 隐藏API(@hide修饰)访问工具 --ZJHiddenApiUtils
+2. Log工具 --ZJLog
+3. Toast工具 --ZJToast
