@@ -6,6 +6,9 @@ import java.lang.reflect.Method;
 
 /**
  * 隐藏API(@hide修饰)访问工具
+ * <p>
+ * github:https://github.com/summer-zhoujie/ZJUtils
+ * doc: https://skyjimzhoujie.gitbook.io/zjutils/zjhiddenapiutils
  */
 public class ZJHiddenApiUtils {
 
