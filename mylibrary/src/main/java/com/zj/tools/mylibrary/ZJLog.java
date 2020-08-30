@@ -6,7 +6,7 @@ import android.util.Log;
 /**
  * log工具
  * <p>
- * 建议在 {@link Application#onCreate()} 方法中调用create方法
+ * 建议在 {@link Application#onCreate()} 方法中调用 init 方法进行初始化
  * <p>
  * github:https://github.com/summer-zhoujie/ZJUtils
  * doc: https://skyjimzhoujie.gitbook.io/zjutils/zjlog
@@ -17,7 +17,7 @@ public class ZJLog {
     // variables
 
     /**
-     * 是否开启log(默认情况，debug-开，release-关)
+     * 是否开启log
      */
     private static boolean enable = false;
     private static String TAG = "ZJLog";
