@@ -1,9 +1,15 @@
 package com.zj.tools.mylibrary;
 
+import android.app.Application;
 import android.util.Log;
 
 /**
  * log工具
+ * <p>
+ * 建议在 {@link Application#onCreate()} 方法中调用create方法
+ * <p>
+ * github:https://github.com/summer-zhoujie/ZJUtils
+ * doc: https://skyjimzhoujie.gitbook.io/zjutils/zjlog
  */
 public class ZJLog {
 

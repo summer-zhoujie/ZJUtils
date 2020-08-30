@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     public static final String ITEM_1 = "1. 访问@hide注释的函数";
+    public static final String ITEM_2 = "2. Log打印工具";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         final ArrayList<String> data = new ArrayList<>();
         data.add(ITEM_1);
+        data.add(ITEM_2);
         final MainAdapter adapter = new MainAdapter(data);
         adapter.setListener(new OnAdapterListener() {
             @Override
@@ -38,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 switch (title) {
                     case ITEM_1:
                         ZJHiddenApiUtilsDemoActivity.launch(MainActivity.this);
+                        break;
+                    case ITEM_2:
+                        ZJLogDemoActivity.launch(MainActivity.this);
                         break;
                     default:
                         break;
