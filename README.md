@@ -14,9 +14,11 @@ allprojects {
 ```gradle
 // Add the dependency
 dependencies {
-    implementation 'com.github.summer-zhoujie:DevUtils:Tag'
+    implementation 'com.github.summer-zhoujie:ZJUtils:latest.release'
 }
 ```
+最新版本查阅地址: https://www.jitpack.io/#summer-zhoujie/ZJUtils
+
 ## 内容
 详细说明链接: https://skyjimzhoujie.gitbook.io/zjutils/
 
