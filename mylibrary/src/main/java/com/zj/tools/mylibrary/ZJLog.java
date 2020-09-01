@@ -26,15 +26,32 @@ public class ZJLog {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // out-func
 
+    /**
+     * 初始化
+     * <p>
+     * {@link #init(Boolean, String)}
+     */
     public static void init(Boolean enable) {
         ZJLog.enable = enable;
     }
 
+    /**
+     * 初始化
+     *
+     * @param enable 是否使能
+     * @param tag    TAG
+     */
     public static void init(Boolean enable, String tag) {
         ZJLog.enable = enable;
         ZJLog.TAG = tag;
     }
 
+    /**
+     * 打印 D 级别的 Log
+     *
+     * @param tag 指定TAG
+     * @param msg msg
+     */
     public static void d(String tag, String msg) {
         if (!enable) {
             return;
@@ -43,6 +60,11 @@ public class ZJLog {
         Log.d(tag, stackInfo + msg);
     }
 
+    /**
+     * 打印 D 级别的 Log
+     * <p>
+     * {@link #d(String, String)}
+     */
     public static void d(String msg) {
         if (!enable) {
             return;

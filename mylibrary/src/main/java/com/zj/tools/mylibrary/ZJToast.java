@@ -5,6 +5,14 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+/**
+ * 隐藏API(@hide修饰)访问工具
+ * <p>
+ * 建议在 {@link Application#onCreate()} 方法中调用 init 方法进行初始化
+ * <p>
+ * github:https://github.com/summer-zhoujie/ZJUtils
+ * doc: https://skyjimzhoujie.gitbook.io/zjutils/zjtoast
+ */
 public class ZJToast {
 
 
@@ -19,23 +27,29 @@ public class ZJToast {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // out-func
 
+    /**
+     * 初始化
+     * <p>
+     * 建议在 {@link Application#onCreate()} 方法中调用 init 方法进行初始化
+     */
     public static void init(Application application) {
         context = application;
     }
 
     /**
-     * 会主动捕获任何异常
-     *
-     * @param text
+     * 展示
+     * <p>
+     * {@link #show(String, int)}
      */
     public static Toast show(String text) {
         return show(text, Toast.LENGTH_SHORT);
     }
 
     /**
-     * 会主动捕获任何异常
+     * 展示, 会主动捕获任何异常
      *
-     * @param text
+     * @param text     展示内容
+     * @param duration 展示时长 {@link Toast#LENGTH_LONG}
      */
     public static Toast show(String text, int duration) {
         try {
@@ -47,18 +61,19 @@ public class ZJToast {
     }
 
     /**
-     * 不会捕获任何异常
-     *
-     * @param text
+     * 展示
+     * <p>
+     * {@link #showUnSafe(String, int)}
      */
     public static Toast showUnSafe(String text) {
         return showUnSafe(text, Toast.LENGTH_SHORT);
     }
 
     /**
-     * 不会捕获任何异常
+     * 展示, 不会捕获任何异常
      *
-     * @param text
+     * @param text     展示内容
+     * @param duration 展示时长 {@link Toast#LENGTH_LONG}
      */
     public static Toast showUnSafe(String text, int duration) {
         return doShow(text, duration);
