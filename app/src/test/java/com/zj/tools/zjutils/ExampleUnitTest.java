@@ -1,4 +1,4 @@
-package com.zj.tools.devutils;
+package com.zj.tools.zjutils;
 
 import org.junit.Test;
 

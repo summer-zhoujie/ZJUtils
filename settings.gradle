@@ -1,2 +1,2 @@
 include ':app', ':mylibrary'
-rootProject.name='DevUtils'
+rootProject.name='ZJUtils'

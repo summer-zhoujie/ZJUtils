@@ -1,4 +1,4 @@
-package com.zj.tools.devutils;
+package com.zj.tools.zjutils;
 
 import android.content.Context;
 import android.content.Intent;

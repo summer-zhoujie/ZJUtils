@@ -1,4 +1,4 @@
-package com.zj.tools.devutils;
+package com.zj.tools.zjutils;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.zj.tools.devutils", appContext.getPackageName());
+        assertEquals("com.zj.tools.zjutils", appContext.getPackageName());
     }
 }
