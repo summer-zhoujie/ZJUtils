@@ -1,7 +1,7 @@
 ## 简介
 开发工具包集合
 
-## 使用
+## 集成
 
 [最新版本查阅地址](https://www.jitpack.io/#summer-zhoujie/ZJUtils)
 
@@ -22,7 +22,7 @@ dependencies {
 ```
 
 
-## 内容
+## 使用
 
 [详细说明链接](https://skyjimzhoujie.gitbook.io/zjutils/)
 
