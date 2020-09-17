@@ -52,28 +52,28 @@ public class ZJAPKUtils {
 
     /**
      * 调起安装APK文件
-     *
+     * <p>
      * 需要在Manifest中集成以下内容
-     *     <provider
-     *         android:name="androidx.core.content.FileProvider"
-     *         android:authorities="com.zj.tools.mylibrary.fileprovider"
-     *         android:exported="false"
-     *         android:grantUriPermissions="true">
-     *         <meta-data
-     *             android:name="android.support.FILE_PROVIDER_PATHS"
-     *             android:resource="@xml/pg_file_path"
-     *             tools:replace="android:resource" />
-     *     </provider>
-     *
+     * <provider
+     * android:name="androidx.core.content.FileProvider"
+     * android:authorities="com.zj.tools.mylibrary.fileprovider"
+     * android:exported="false"
+     * android:grantUriPermissions="true">
+     * <meta-data
+     * android:name="android.support.FILE_PROVIDER_PATHS"
+     * android:resource="@xml/pg_file_path"
+     * tools:replace="android:resource" />
+     * </provider>
+     * <p>
      * 再创建xml文件, 内容如下
-     *
+     * <p>
      * <?xml version="1.0" encoding="utf-8"?>
      * <paths>
-     *
-     *     <!--  APKUtils  这里填入自己APK文件放置的路径即可-->
-     *     <external-files-path
-     *         name="external_files_path"
-     *         path="Download" />
+     * <p>
+     * <!--  APKUtils  这里填入自己APK文件放置的路径即可-->
+     * <external-files-path
+     * name="external_files_path"
+     * path="Download" />
      * </paths>
      *
      * @param path apk文件路径
@@ -105,7 +105,7 @@ public class ZJAPKUtils {
                 }
 
             } catch (Exception e) {
-                Log.e("ZJAPKUtils","error = "+ Log.getStackTraceString(e));
+                Log.e("ZJAPKUtils", "error = " + Log.getStackTraceString(e));
             }
         }
     }
@@ -127,5 +127,20 @@ public class ZJAPKUtils {
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
         context.startActivity(intent);
+    }
+
+    /**
+     * 获取安装文件包名
+     *
+     * @param path apk filepath
+     * @return packagename
+     */
+    public static String getPackageName(Context context, String path) {
+        PackageManager pm = context.getPackageManager();
+        PackageInfo info = pm.getPackageArchiveInfo(path, PackageManager.GET_ACTIVITIES);
+        if (info != null) {
+            return info.packageName;
+        }
+        return null;
     }
 }
