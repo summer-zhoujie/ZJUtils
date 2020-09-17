@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zj.tools.zjutils">
-
-    <!--    APKUtils (调起安装的时候需要)    -->
+    <!-- APKUtils (调起安装的时候需要) -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
@@ -13,7 +12,8 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ZJApkUtilsDemoActivity"></activity>
+        <activity android:name=".ZJConvertUtilsActivity"></activity>
+        <activity android:name=".ZJApkUtilsDemoActivity" />
         <activity android:name=".ZJNotificationUtilsDemoActivity" />
         <activity android:name=".ZJToastActivity" />
         <activity android:name=".ZJLogDemoActivity" />
@@ -24,9 +24,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!--    APKUtils (高版本调起安装时需要)    -->
+        </activity> <!-- APKUtils (高版本调起安装时需要) -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.zj.tools.mylibrary.fileprovider"

@@ -16,15 +16,27 @@ import java.io.File;
 
 public class ZJApkUtilsDemoActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // variables
+
     private Button isInstall;
     private Button doInstall;
     private Button getPackageName;
     private TextView tvResult;
     private File apkFile;
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // out-func
+
     public static void launch(Context context) {
         context.startActivity(new Intent(context, ZJApkUtilsDemoActivity.class));
     }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // in-func
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
