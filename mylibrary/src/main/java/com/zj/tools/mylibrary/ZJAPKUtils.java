@@ -52,29 +52,29 @@ public class ZJAPKUtils {
 
     /**
      * 调起安装APK文件
-     * <p>
+     *
      * 需要在Manifest中集成以下内容
+     *
      * <provider
-     * android:name="androidx.core.content.FileProvider"
-     * android:authorities="com.zj.tools.mylibrary.fileprovider"
-     * android:exported="false"
-     * android:grantUriPermissions="true">
-     * <meta-data
-     * android:name="android.support.FILE_PROVIDER_PATHS"
-     * android:resource="@xml/pg_file_path"
-     * tools:replace="android:resource" />
+     *  android:name="androidx.core.content.FileProvider"
+     *  android:authorities="com.zj.tools.mylibrary.fileprovider"
+     *  android:exported="false"
+     *  android:grantUriPermissions="true">
+     *      <meta-data
+     *      android:name="android.support.FILE_PROVIDER_PATHS"
+     *      android:resource="@xml/pg_file_path"
+     *      tools:replace="android:resource" />
      * </provider>
-     * <p>
+     *
      * 再创建xml文件, 内容如下
-     * <p>
-     * <?xml version="1.0" encoding="utf-8"?>
-     * <paths>
-     * <p>
-     * <!--  APKUtils  这里填入自己APK文件放置的路径即可-->
-     * <external-files-path
-     * name="external_files_path"
-     * path="Download" />
-     * </paths>
+     *
+     *  <?xml version="1.0" encoding="utf-8"?>
+     *  <paths>
+     *  <!--  APKUtils  这里填入自己APK文件放置的路径即可-->
+     *      <external-files-path
+     *          name="external_files_path"
+     *          path="Download" />
+     *  </paths>
      *
      * @param path apk文件路径
      */
