@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ZJApkUtilsDemoActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="44dp"
+        android:text="请在外部存储\n Android/data/data/com.zj.tools.zjutils/files/ 下\n放入1.apk, 然后开始点击测试"
+        app:layout_constraintBottom_toTopOf="@+id/is_install"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/is_install"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginBottom="26dp"
+        android:text="测试是否安装"
+        app:layout_constraintBottom_toTopOf="@+id/do_install"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/do_install"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="执行安装"
+        app:layout_constraintBottom_toTopOf="@+id/get_package_name"
+        app:layout_constraintStart_toStartOf="@+id/is_install"
+        app:layout_constraintTop_toBottomOf="@+id/is_install" />
+
+    <Button
+        android:id="@+id/get_package_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="APK文件包名"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result"
+        app:layout_constraintStart_toStartOf="@+id/do_install"
+        app:layout_constraintTop_toBottomOf="@+id/do_install" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="231dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="26dp"
+        android:text="结果如下: \n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/get_package_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

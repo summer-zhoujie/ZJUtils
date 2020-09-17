@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.zj.tools.mylibrary.ZJAPKUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String ITEM_2 = "2. Log打印工具";
     public static final String ITEM_3 = "3. Toast工具";
     public static final String ITEM_4 = "4. 通知工具";
+    public static final String ITEM_5 = "5. APK文件工具";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         data.add(ITEM_2);
         data.add(ITEM_3);
         data.add(ITEM_4);
+        data.add(ITEM_5);
         final MainAdapter adapter = new MainAdapter(data);
         adapter.setListener(new OnAdapterListener() {
             @Override
@@ -50,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case ITEM_4:
                         ZJNotificationUtilsDemoActivity.launch(MainActivity.this);
+                        break;
+                    case ITEM_5:
+                        ZJApkUtilsDemoActivity.launch(MainActivity.this);
                         break;
                     default:
                         break;

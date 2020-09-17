@@ -78,7 +78,7 @@ public class ZJAPKUtils {
      *
      * @param path apk文件路径
      */
-    private static void installApkfile(Context context, String path) {
+    public static void installApkFile(Context context, String path) {
 
         File file = new File(path);
         PackageManager pm = context.getPackageManager();

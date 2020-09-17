@@ -4,5 +4,5 @@
     <!--  APKUtils  -->
     <external-files-path
         name="external_files_path"
-        path="Download" />
+        path="/" />
 </paths>
