@@ -47,40 +47,6 @@ public class ZJSPUtils {
     }
 
     /**
-     * 从SP中加载属性, 仅当天有效
-     */
-    public static String getStringValidToday(String key, String defaultValue) {
-        final String s = getSp().getString(key, defaultValue);
-        final String todayString = getTodayString();
-        if (TextUtils.isEmpty(s) || TextUtils.equals(defaultValue, s)) {
-            putStringValidToday(key, defaultValue);
-            return defaultValue;
-        }
-
-        final String[] split = s.split(",");
-        if (split.length == 2) {
-            if (todayString.equals(split[0])) {
-                return split[1];
-            } else {
-                putStringValidToday(key, defaultValue);
-                return defaultValue;
-            }
-        }
-
-        putStringValidToday(key, defaultValue);
-        return defaultValue;
-    }
-
-    /**
-     * 保存属性到SP中, 仅当天有效
-     */
-    public static boolean putStringValidToday(String key, String value) {
-        SharedPreferences.Editor editor = getSp().edit();
-        editor.putString(key, getTodayString() + "," + value);
-        return editor.commit();
-    }
-
-    /**
      * 保存属性到SP中
      */
     public static boolean putInt(String key, int value) {
@@ -142,6 +108,31 @@ public class ZJSPUtils {
 
     public static float getFloat(String key, float defaultValue) {
         return getSp().getFloat(key, defaultValue);
+    }
+
+    /**
+     * 从SP中加载属性, 仅当天有效
+     */
+    public static String getStringForToday(String key, String defaultValue) {
+        String s = getSp().getString(key, defaultValue);
+        final String todayString = "____" + getTodayString() + "____";
+        if (s != null && s.startsWith(todayString)) {
+            // 有效值
+            s = s.replaceFirst(todayString, "");
+            return s;
+        }
+
+        return defaultValue;
+    }
+
+    /**
+     * 保存属性到SP中, 仅当天有效
+     */
+    public static boolean putStringForToday(String key, String value) {
+        SharedPreferences.Editor editor = getSp().edit();
+        final String todayString = "____" + getTodayString() + "____";
+        editor.putString(key, todayString + value);
+        return editor.commit();
     }
 
     private static String getTodayString() {
