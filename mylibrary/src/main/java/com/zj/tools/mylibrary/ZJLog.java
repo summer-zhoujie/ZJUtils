@@ -73,6 +73,33 @@ public class ZJLog {
         Log.d(TAG, stackInfo + msg);
     }
 
+    /**
+     * 打印 E 级别的 Log
+     *
+     * @param tag 指定TAG
+     * @param msg msg
+     */
+    public static void e(String tag, String msg) {
+        if (!enable) {
+            return;
+        }
+        String stackInfo = getStackInfo();
+        Log.e(tag, stackInfo + msg);
+    }
+
+    /**
+     * 打印 E 级别的 Log
+     * <p>
+     * {@link #e(String, String)}
+     */
+    public static void e(String msg) {
+        if (!enable) {
+            return;
+        }
+        String stackInfo = getStackInfo();
+        Log.e(TAG, stackInfo + msg);
+    }
+
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // in-func
