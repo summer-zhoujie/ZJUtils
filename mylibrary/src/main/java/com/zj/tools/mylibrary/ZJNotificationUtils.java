@@ -47,6 +47,21 @@ public class ZJNotificationUtils {
 
     /**
      * 展示notification
+     *
+     * @param smallIconId      图标
+     * @param body             正文内容
+     * @param title            标题
+     * @param pendingIntent    定义点击执行的行为
+     * @param notifId          通知Id
+     * @param groupId          通知的分组Id
+     * @param groupMsg         通知的分组信息
+     * @param channelId        通知的渠道号
+     * @param channelName      通知的渠道描述(定义属于 营销通知, 普通通知)
+     * @param enableSound      是否使用声音
+     * @param lightColor       是否使用提示灯
+     * @param enableVibration  是否使用振动
+     * @param vibrationPattern 定义振动方式
+     * @param remoteViews      定义自定义View
      */
     public static void show(Context context, int smallIconId, String body, String title, PendingIntent pendingIntent, int notifId, String groupId, String groupMsg, String channelId, String channelName, RemoteViews remoteViews, long[] vibrationPattern, int lightColor, boolean enableVibration, boolean enableSound) {
         if (context == null) {
