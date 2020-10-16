@@ -3,12 +3,14 @@ package com.zj.tools.mylibrary;
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.text.TextUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
+/**
+ * {@link SharedPreferences}辅助类
+ * github:https://github.com/summer-zhoujie/ZJUtils
+ */
 public class ZJSPUtils {
 
     private static SharedPreferences sharedpreferences = null;

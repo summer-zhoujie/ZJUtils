@@ -16,4 +16,12 @@ public class ZJConvertUtils {
     public static float px2dp(float pxValue) {
         return (pxValue / Resources.getSystem().getDisplayMetrics().density);
     }
+
+    public static int sp2px(float spValue) {
+        return (int) (0.5f + spValue * Resources.getSystem().getDisplayMetrics().scaledDensity);
+    }
+
+    public static int px2sp(float pxValue) {
+        return (int) (0.5f + pxValue / Resources.getSystem().getDisplayMetrics().scaledDensity);
+    }
 }

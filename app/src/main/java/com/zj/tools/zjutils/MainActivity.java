@@ -1,18 +1,16 @@
 package com.zj.tools.zjutils;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.zj.tools.mylibrary.ZJAPKUtils;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String ITEM_4 = "4. 通知工具";
     public static final String ITEM_5 = "5. APK文件工具";
     public static final String ITEM_6 = "6. 转换工具";
+    public static final String ITEM_7 = "7. TextView文字辅助工具";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         data.add(ITEM_4);
         data.add(ITEM_5);
         data.add(ITEM_6);
+        data.add(ITEM_7);
         final MainAdapter adapter = new MainAdapter(data);
         adapter.setListener(new OnAdapterListener() {
             @Override
@@ -62,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case ITEM_6:
                         ZJConvertUtilsActivity.launch(MainActivity.this);
+                        break;
+                    case ITEM_7:
+                        ZJRichTextUtilsDemoActivity.launch(MainActivity.this);
                         break;
                     default:
                         break;
