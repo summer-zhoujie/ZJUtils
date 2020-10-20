@@ -6,8 +6,10 @@ import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
@@ -18,6 +20,15 @@ import androidx.annotation.Nullable;
  * github:https://github.com/summer-zhoujie/ZJUtils
  */
 public class ZJTextUtils {
+
+    /**
+     * 设置TextView的内容可滑动
+     */
+    public static void setContentSrollable(TextView textView) {
+        if (textView != null) {
+            textView.setMovementMethod(ScrollingMovementMethod.getInstance());
+        }
+    }
 
     /**
      * 辅助生成{@link android.widget.TextView#setText(CharSequence)}, 支持设置颜色, 大小
