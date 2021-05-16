@@ -146,7 +146,7 @@ public class ZJSPUtils {
         return sharedpreferences;
     }
 
-    private static void initSp(Application application) {
+    public static void initSp(Application application) {
         if (sharedpreferences != null) {
             return;
         }
