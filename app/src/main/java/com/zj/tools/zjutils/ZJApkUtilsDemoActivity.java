@@ -14,8 +14,11 @@ import com.zj.tools.mylibrary.ZJAPKUtils;
 
 import java.io.File;
 
-public class ZJApkUtilsDemoActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class ZJApkUtilsDemoActivity extends BaseActivity implements View.OnClickListener {
+    @Override
+    protected String title() {
+        return "ZJApkUtils";
+    }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // variables

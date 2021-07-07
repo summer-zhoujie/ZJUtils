@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="66dp"
         android:layout_marginTop="61dp"
-        android:text="点击弹出"
+        android:text="点击弹出自定义通知栏"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

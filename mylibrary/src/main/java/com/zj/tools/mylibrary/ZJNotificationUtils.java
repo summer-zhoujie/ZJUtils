@@ -16,8 +16,9 @@ import androidx.core.app.NotificationCompat;
 
 /**
  * 通知工具
- * <p>
- * github:https://github.com/summer-zhoujie/ZJUtils
+ *
+ * 1. 显示默认Notification
+ * 2. 显示自定义Notification
  */
 public class ZJNotificationUtils {
 
@@ -38,6 +39,12 @@ public class ZJNotificationUtils {
                 null, DEFAULT_VIBRATION_PATTERN, DEFAULT_COLOR, DEFAULT_ENABLE_VIBRATION, DEFAULT_ENABLE_SOUND);
     }
 
+    /**
+     * 展示自定义notification
+     * @param context
+     * @param remoteViews
+     * @param smallIconId
+     */
     public static void show(Context context, RemoteViews remoteViews, int smallIconId) {
         int notifId = baseNotifId + 1;
         show(context, smallIconId, null, null, null,

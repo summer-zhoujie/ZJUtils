@@ -17,9 +17,11 @@ import java.io.File;
 import java.util.HashMap;
 
 /**
- * APK文件工具
- * <p>
- * github:https://github.com/summer-zhoujie/ZJUtils
+ * apk文件工具
+ *
+ * 1. apk文件是否安装
+ * 2. 调起apk文件的安装
+ * 3. 获取apk文件的包名
  */
 public class ZJAPKUtils {
 

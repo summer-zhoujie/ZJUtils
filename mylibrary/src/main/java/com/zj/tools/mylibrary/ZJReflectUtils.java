@@ -17,13 +17,8 @@ import java.util.Map;
 
 /**
  * 反射工具
- * github: https://github.com/Blankj/AndroidUtilCode
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2017/12/15
- *     desc  : utils about reflect
- * </pre>
+ *
+ * 反射代码封装, 便捷调用
  */
 public final class ZJReflectUtils {
 

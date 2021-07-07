@@ -12,14 +12,30 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ZJRichTextUtilsDemoActivity"></activity>
-        <activity android:name=".ZJConvertUtilsActivity" />
-        <activity android:name=".ZJApkUtilsDemoActivity" />
-        <activity android:name=".ZJNotificationUtilsDemoActivity" />
-        <activity android:name=".ZJToastActivity" />
-        <activity android:name=".ZJLogDemoActivity" />
-        <activity android:name=".ZJHiddenApiUtilsDemoActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ZJRichTextUtilsDemoActivity"
+            android:theme="@style/AppTheme.Activity" />
+        <activity
+            android:name=".ZJConvertUtilsActivity"
+            android:theme="@style/AppTheme.Activity" />
+        <activity
+            android:name=".ZJApkUtilsDemoActivity"
+            android:theme="@style/AppTheme.Activity" />
+        <activity
+            android:name=".ZJNotificationUtilsDemoActivity"
+            android:theme="@style/AppTheme.Activity" />
+        <activity
+            android:name=".ZJToastActivity"
+            android:theme="@style/AppTheme.Activity" />
+        <activity
+            android:name=".ZJLogDemoActivity"
+            android:theme="@style/AppTheme.Activity" />
+        <activity
+            android:name=".ZJHiddenApiUtilsDemoActivity"
+            android:theme="@style/AppTheme.Activity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

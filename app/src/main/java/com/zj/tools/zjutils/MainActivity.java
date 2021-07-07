@@ -7,24 +7,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
     public static final String ITEM_1 = "1. 访问@hide注释的函数";
-    public static final String ITEM_2 = "2. Log打印工具";
-    public static final String ITEM_3 = "3. Toast工具";
-    public static final String ITEM_4 = "4. 通知工具";
-    public static final String ITEM_5 = "5. APK文件工具";
-    public static final String ITEM_6 = "6. 转换工具";
-    public static final String ITEM_7 = "7. TextView文字辅助工具";
+    public static final String ITEM_2 = "4. 通知";
+    public static final String ITEM_3 = "5. APK文件";
+    public static final String ITEM_4 = "7. 不同颜色大小的String拼接";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +28,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.list);
 
         final ArrayList<String> data = new ArrayList<>();
-        data.add(ITEM_1);
-        data.add(ITEM_2);
-        data.add(ITEM_3);
         data.add(ITEM_4);
-        data.add(ITEM_5);
-        data.add(ITEM_6);
-        data.add(ITEM_7);
+        data.add(ITEM_3);
+        data.add(ITEM_2);
+        data.add(ITEM_1);
         final MainAdapter adapter = new MainAdapter(data);
         adapter.setListener(new OnAdapterListener() {
             @Override
@@ -49,21 +41,12 @@ public class MainActivity extends AppCompatActivity {
                         ZJHiddenApiUtilsDemoActivity.launch(MainActivity.this);
                         break;
                     case ITEM_2:
-                        ZJLogDemoActivity.launch(MainActivity.this);
-                        break;
-                    case ITEM_3:
-                        ZJToastActivity.launch(MainActivity.this);
-                        break;
-                    case ITEM_4:
                         ZJNotificationUtilsDemoActivity.launch(MainActivity.this);
                         break;
-                    case ITEM_5:
+                    case ITEM_3:
                         ZJApkUtilsDemoActivity.launch(MainActivity.this);
                         break;
-                    case ITEM_6:
-                        ZJConvertUtilsActivity.launch(MainActivity.this);
-                        break;
-                    case ITEM_7:
+                    case ITEM_4:
                         ZJRichTextUtilsDemoActivity.launch(MainActivity.this);
                         break;
                     default:
@@ -72,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(adapter);
     }
 
@@ -134,5 +116,15 @@ public class MainActivity extends AppCompatActivity {
                 title = inflate.findViewById(R.id.tv_value);
             }
         }
+    }
+
+    @Override
+    protected String title() {
+        return "主页";
+    }
+
+    @Override
+    protected boolean enableBack() {
+        return false;
     }
 }

@@ -25,7 +25,12 @@ import com.zj.tools.mylibrary.ZJTextUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ZJRichTextUtilsDemoActivity extends AppCompatActivity implements View.OnClickListener {
+public class ZJRichTextUtilsDemoActivity extends BaseActivity implements View.OnClickListener {
+
+    @Override
+    protected String title() {
+        return "ZJRichTextUtils";
+    }
 
     private TextView tvDisplay;
     private Button btRefresh;

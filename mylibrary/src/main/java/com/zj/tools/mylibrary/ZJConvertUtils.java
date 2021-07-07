@@ -5,7 +5,6 @@ import android.content.res.Resources;
 /**
  * 转换工具
  * <p>
- * github:https://github.com/summer-zhoujie/ZJUtils
  */
 public class ZJConvertUtils {
 

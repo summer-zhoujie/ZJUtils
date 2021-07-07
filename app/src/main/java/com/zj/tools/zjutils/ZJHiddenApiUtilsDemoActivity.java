@@ -15,8 +15,11 @@ import com.zj.tools.mylibrary.ZJHiddenApiUtils;
 
 import java.lang.reflect.Method;
 
-public class ZJHiddenApiUtilsDemoActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class ZJHiddenApiUtilsDemoActivity extends BaseActivity implements View.OnClickListener {
+    @Override
+    protected String title() {
+        return "ZJHiddenApiUtils";
+    }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // variables

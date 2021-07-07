@@ -7,8 +7,10 @@ import java.util.Date;
 
 /**
  * 身份证工具类
- * <p>
- * github:https://github.com/summer-zhoujie/ZJUtils
+ *
+ * 1. 身份证号码是否有效
+ * 2. 性别
+ * 3. 年龄
  */
 public class ZJIdCardUtils {
 
@@ -140,6 +142,11 @@ public class ZJIdCardUtils {
 
     }
 
+    /**
+     * 根据生日计算年龄
+     * @param birthday 生日
+     * @return 年龄
+     */
     private static int getAgeByDate(Date birthday) {
         Calendar calendar = Calendar.getInstance();
 

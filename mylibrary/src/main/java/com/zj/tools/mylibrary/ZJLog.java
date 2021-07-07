@@ -5,11 +5,14 @@ import android.util.Log;
 
 /**
  * log工具
- * <p>
- * 建议在 {@link Application#onCreate()} 方法中调用 init 方法进行初始化
- * <p>
- * github:https://github.com/summer-zhoujie/ZJUtils
- * doc: https://skyjimzhoujie.gitbook.io/zjutils/zjlog
+ *
+ * 先需要初始化, 建议在 {@link Application#onCreate()} 方法中调用 init 方法进行初始化
+ * init(true, TAG);
+ *
+ * 接下来就可以打印log, 目前支持3种
+ * e();
+ * i();
+ * d();
  */
 public class ZJLog {
 
@@ -98,6 +101,33 @@ public class ZJLog {
         }
         String stackInfo = getStackInfo();
         Log.e(TAG, stackInfo + msg);
+    }
+
+    /**
+     * 打印 I 级别的 Log
+     *
+     * @param tag 指定TAG
+     * @param msg msg
+     */
+    public static void i(String tag, String msg) {
+        if (!enable) {
+            return;
+        }
+        String stackInfo = getStackInfo();
+        Log.i(tag, stackInfo + msg);
+    }
+
+    /**
+     * 打印 I 级别的 Log
+     * <p>
+     * {@link #e(String, String)}
+     */
+    public static void i(String msg) {
+        if (!enable) {
+            return;
+        }
+        String stackInfo = getStackInfo();
+        Log.i(TAG, stackInfo + msg);
     }
 
 

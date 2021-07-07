@@ -11,10 +11,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.zj.tools.mylibrary.ZJNotificationUtils;
 
-public class ZJNotificationUtilsDemoActivity extends AppCompatActivity implements View.OnClickListener {
+public class ZJNotificationUtilsDemoActivity extends BaseActivity implements View.OnClickListener {
+    @Override
+    protected String title() {
+        return "ZJNotificationUtils";
+    }
 
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
     // variables
 
     private Button clickShow;

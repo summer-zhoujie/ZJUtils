@@ -6,9 +6,30 @@ import java.lang.reflect.Method;
 
 /**
  * 隐藏API(@hide修饰)访问工具
+ *
  * <p>
- * github:https://github.com/summer-zhoujie/ZJUtils
- * doc: https://skyjimzhoujie.gitbook.io/zjutils/zjhiddenapiutils
+ *
+ *  先使用如下方法设置方法白名单
+ *
+ *  // 对所有方法设置白名单
+ *  ZJHiddenApiUtils.exemptAll();
+ *
+ *  或者
+ *
+ *  //  对指定方法设置白名单
+ *  //  例如: android.util.DebugUtils.sizeValueToString(long, StringBuilder)
+ *  ZJHiddenApiUtils.setExemption("Landroid/util/DebugUtils;->sizeValueToString(JLjava/lang/StringBuilder;)Ljava/lang/String;");
+ *
+ *  然后开始调用方法(正常的反射流程)
+ *
+ *  try {
+ *             final Class<?> class_DebugUtils = Class.forName("android.util.DebugUtils");
+ *             final Method m_SizeValueToString = class_DebugUtils.getDeclaredMethod("sizeValueToString", long.class, StringBuilder.class);
+ *             final String result = (String) m_SizeValueToString.invoke(null, SIZE_1_5M, null);
+ *             printResult(result);
+ *         } catch (Exception e) {
+ *             printResult(Log.getStackTraceString(e));
+ *  }
  */
 public class ZJHiddenApiUtils {
 
