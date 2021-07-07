@@ -31,4 +31,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    // PowerMock brings in the mockito dependency
+    androidTestImplementation 'org.powermock:powermock-module-junit4:1.6.5'
+    androidTestImplementation 'org.powermock:powermock-module-junit4-rule:1.6.5'
+    androidTestImplementation 'org.powermock:powermock-api-mockito:1.6.5'
+    androidTestImplementation ('org.powermock:powermock-classloading-xstream:1.6.5'){
+        exclude group: 'xpp3', module: 'xpp3_min'
+        exclude group: 'xmlpull', module: 'xmlpull'
+    }
 }

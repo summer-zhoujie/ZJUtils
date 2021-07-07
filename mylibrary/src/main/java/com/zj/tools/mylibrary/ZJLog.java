@@ -130,6 +130,60 @@ public class ZJLog {
         Log.i(TAG, stackInfo + msg);
     }
 
+    /**
+     * 打印 V 级别的 Log
+     *
+     * @param tag 指定TAG
+     * @param msg msg
+     */
+    public static void v(String tag, String msg) {
+        if (!enable) {
+            return;
+        }
+        String stackInfo = getStackInfo();
+        Log.v(tag, stackInfo + msg);
+    }
+
+    /**
+     * 打印 V 级别的 Log
+     * <p>
+     * {@link #v(String, String)}
+     */
+    public static void v(String msg) {
+        if (!enable) {
+            return;
+        }
+        String stackInfo = getStackInfo();
+        Log.v(TAG, stackInfo + msg);
+    }
+
+
+    /**
+     * 打印 W 级别的 Log
+     *
+     * @param tag 指定TAG
+     * @param msg msg
+     */
+    public static void w(String tag, String msg) {
+        if (!enable) {
+            return;
+        }
+        String stackInfo = getStackInfo();
+        Log.w(tag, stackInfo + msg);
+    }
+
+    /**
+     * 打印 W 级别的 Log
+     * <p>
+     * {@link #w(String, String)}
+     */
+    public static void w(String msg) {
+        if (!enable) {
+            return;
+        }
+        String stackInfo = getStackInfo();
+        Log.w(TAG, stackInfo + msg);
+    }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // in-func

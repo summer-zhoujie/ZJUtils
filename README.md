@@ -49,3 +49,60 @@ setExemption  : 指定某些@hide修饰的方法进入白名单
 exemptAll     : 安排所有@hide方法进入白名单
 ```
 > 进入白名单的方法之后, 就可以顺利通过反射访问了, 详情查看标题的Demo链接
+
+* ## 身份证工具类 -> [ZJIdCardUtils.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJIdCardUtils.java) -> [Test](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/androidTest/java/com/zj/tools/mylibrary/ZJIdCardUtilsTest.java)
+```
+isIdCardValid : 是否是有效身份证号码(本地校验,只是校验格式是否正确)
+getGender     : 性别
+getAge        : 年龄
+```
+
+* ## Log打印的工具类 -> [ZJLog.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJLog.java) -> [Test](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/androidTest/java/com/zj/tools/mylibrary/ZJIdCardUtilsTest.java)
+```
+init    : 初始化(配置TAG和使能状态)
+d       : 打印D级别Log
+e       : 打印E级别Log
+i       : 打印I级别Log
+w       : 打印W级别Log
+v       : 打印V级别Log
+```
+
+* ## 通知类工具 -> [ZJNotificationUtils.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJNotificationUtils.java) -> [Demo](https://github.com/summer-zhoujie/ZJUtils/blob/master/app/src/main/java/com/zj/tools/zjutils/ZJNotificationUtilsDemoActivity.java)
+```
+show  : 展示模板通知/展示自定义通知(需要自行传入View)
+```
+
+* ## 反射工具包 -> [ZJReflectUtils.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJReflectUtils.java) -> [Test](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/androidTest/java/com/zj/tools/mylibrary/ZJReflectUtilsTest.java)
+```
+reflect    : 设置要反射的类
+newInstance: 实例化反射对象
+field      : 设置反射的字段
+method     : 设置反射的方法
+get        : 获取反射想要获取的
+```
+> [CV参考链接](https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md)
+
+* ## 屏幕参数工具 -> [ZJScreenUtils.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJScreenUtils.java) -> [Test](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/androidTest/java/com/zj/tools/mylibrary/ZJScreenUtilsTest.java)
+```
+getScreenWidth getScreenHeight  : 获取屏幕的宽/高
+```
+
+* ## SharePreferences工具 -> [ZJSPUtils.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJSPUtils.java) -> [Test](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/androidTest/java/com/zj/tools/mylibrary/ZJSPUtilsTest.java)
+```
+initSp                              : 使用之前需要初始化
+put(...) get(...)                   : 存/取各种类型数据
+put(...)ForToday get(...)ForToday   : 存/取各种类型数据(当天有效,隔天会被清零)
+contains                            : 是否包含某个Key
+remove/clear                        : 移除某个Key/清除全部
+```
+
+* ## SpannableString拼接工具 -> [ZJTextUtils.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJTextUtils.java) -> [Demo](https://github.com/summer-zhoujie/ZJUtils/blob/master/app/src/main/java/com/zj/tools/zjutils/ZJRichTextUtilsDemoActivity.java)
+```
+generateSpannableString : 生成一个用于拼接的SpannableString
+```
+
+* ## ZJToast吐司工具 -> [ZJToast.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJToast.java)
+```
+init  : 使用之前需要初始化
+show  : 弹出吐司
+```

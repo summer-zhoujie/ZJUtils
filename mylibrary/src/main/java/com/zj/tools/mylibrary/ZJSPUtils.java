@@ -31,6 +31,12 @@ public class ZJSPUtils {
         return editor.commit();
     }
 
+    public static boolean clear() {
+        SharedPreferences.Editor editor = getSp().edit();
+        editor.clear();
+        return editor.commit();
+    }
+
     /**
      * 保存属性到SP中
      */
@@ -52,15 +58,6 @@ public class ZJSPUtils {
      * 保存属性到SP中
      */
     public static boolean putInt(String key, int value) {
-        SharedPreferences.Editor editor = getSp().edit();
-        editor.putInt(key, value);
-        return editor.commit();
-    }
-
-    /**
-     * 保存属性到SP中
-     */
-    public static boolean putIntValidToday(String key, int value) {
         SharedPreferences.Editor editor = getSp().edit();
         editor.putInt(key, value);
         return editor.commit();
@@ -135,6 +132,35 @@ public class ZJSPUtils {
         final String todayString = "____" + getTodayString() + "____";
         editor.putString(key, todayString + value);
         return editor.commit();
+    }
+
+    public static int getIntForToday(String key, int defaultValue) {
+        return parseInteger(getStringForToday(key, defaultValue + ""), defaultValue);
+    }
+
+    public static int parseInteger(String str, int def) {
+        try {
+            return Integer.parseInt(str);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+        return def;
+    }
+
+    public static void putIntForToday(String key, int value) {
+        putStringForToday(key, value + "");
+    }
+
+    public static boolean getBooleanForToday(String key, boolean defaultValue) {
+        return getIntForToday(key, defaultValue ? 1 : 0) == 1;
+    }
+
+    /**
+     * 0 false
+     * 1 true
+     */
+    public static void putBooleanForToday(String key, boolean value) {
+        putIntForToday(key, value ? 1 : 0);
     }
 
     private static String getTodayString() {
