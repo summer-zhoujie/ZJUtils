@@ -25,6 +25,8 @@ dependencies {
 # 3.功能介绍
 
 * ## apk文件相关 -> [源文件](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/ZJAPKUtils.java) -> [Demo](https://github.com/summer-zhoujie/ZJUtils/blob/master/app/src/main/java/com/zj/tools/zjutils/ZJApkUtilsDemoActivity.java)
+```
 isApkFileInstalled : apk文件是否安装
 installApkFile     : 调起apk文件进行安装
 getPackageName     : 获取apk文件的包名
+```
