@@ -13,22 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ZJRichTextUtilsDemoActivity"
+            android:name=".CirProgressBarActivity"
             android:theme="@style/AppTheme.Activity" />
         <activity
-            android:name=".ZJConvertUtilsActivity"
+            android:name=".ZJRichTextUtilsDemoActivity"
             android:theme="@style/AppTheme.Activity" />
         <activity
             android:name=".ZJApkUtilsDemoActivity"
             android:theme="@style/AppTheme.Activity" />
         <activity
             android:name=".ZJNotificationUtilsDemoActivity"
-            android:theme="@style/AppTheme.Activity" />
-        <activity
-            android:name=".ZJToastActivity"
-            android:theme="@style/AppTheme.Activity" />
-        <activity
-            android:name=".ZJLogDemoActivity"
             android:theme="@style/AppTheme.Activity" />
         <activity
             android:name=".ZJHiddenApiUtilsDemoActivity"

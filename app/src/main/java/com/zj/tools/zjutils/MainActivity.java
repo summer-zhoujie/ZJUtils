@@ -17,9 +17,10 @@ public class MainActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
     public static final String ITEM_1 = "1. 访问@hide注释的函数";
-    public static final String ITEM_2 = "4. 通知";
-    public static final String ITEM_3 = "5. APK文件";
-    public static final String ITEM_4 = "7. 不同颜色大小的String拼接";
+    public static final String ITEM_2 = "2. 通知";
+    public static final String ITEM_3 = "3. APK文件";
+    public static final String ITEM_4 = "4. 不同颜色大小的String拼接";
+    public static final String ITEM_5 = "5. 圆环进度条";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends BaseActivity {
         recyclerView = findViewById(R.id.list);
 
         final ArrayList<String> data = new ArrayList<>();
+        data.add(ITEM_5);
         data.add(ITEM_4);
         data.add(ITEM_3);
         data.add(ITEM_2);
@@ -48,6 +50,9 @@ public class MainActivity extends BaseActivity {
                         break;
                     case ITEM_4:
                         ZJRichTextUtilsDemoActivity.launch(MainActivity.this);
+                        break;
+                    case ITEM_5:
+                        CirProgressBarActivity.launch(MainActivity.this);
                         break;
                     default:
                         break;
@@ -120,7 +125,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected String title() {
-        return "主页";
+        return "Home";
     }
 
     @Override

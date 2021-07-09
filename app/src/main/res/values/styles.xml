@@ -11,4 +11,5 @@
     <style name="AppTheme.Activity">
         <item name="android:screenOrientation">portrait</item>
     </style>
+
 </resources>
