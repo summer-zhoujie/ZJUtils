@@ -106,3 +106,22 @@ generateSpannableString : 生成一个用于拼接的SpannableString
 init  : 使用之前需要初始化
 show  : 弹出吐司
 ```
+
+* ## 自定义视图-圆环进度 -> [CircleProgressBar.java](https://github.com/summer-zhoujie/ZJUtils/blob/master/mylibrary/src/main/java/com/zj/tools/mylibrary/view/CircleProgressBar.java) -> [Demo](https://github.com/summer-zhoujie/ZJUtils/blob/master/app/src/main/java/com/zj/tools/zjutils/CirProgressBarActivity.java)
+```
+max                     : 最大进度值(目标值)
+progress                : 当前进度值
+progress_color          : 进度条的颜色(当设置渐变色则此属性无效)
+progress_color_start    : 进度条颜色(渐变色起始颜色)
+progress_color_mid      : 进度条颜色(渐变色中间颜色)
+progress_color_end      : 进度条颜色(渐变色结束颜色)
+progress_bg_color       : 背景轨道颜色(当设置渐变色则此属性无效)
+progress_bg_color_start : 背景轨道颜色(渐变色起始颜色)
+progress_bg_color_mid   : 背景轨道颜色(渐变色中间颜色)
+progress_bg_color_end   : 背景轨道颜色(渐变色结束颜色)
+progress_circle_percent : 圆环的百分比, 决定是否是整圆还是圆弧
+progress_start_angle    : 进度条的起始角度
+progress_stroke_width   : 进度条的宽度
+progress_thumb_width    : thumb图片的大小
+progress_thumb_src      : thumb图片
+```
