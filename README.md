@@ -125,4 +125,4 @@ progress_stroke_width   : 进度条的宽度
 progress_thumb_width    : thumb图片的大小
 progress_thumb_src      : thumb图片
 ```
-<img width="50%" height="50%" src="https://github.com/summer-zhoujie/ZJUtils/blob/master/docs/circle_progress.gif"/>
+<img width="30%" height="30%" src="https://github.com/summer-zhoujie/ZJUtils/blob/master/docs/circle_progress.gif"/>
