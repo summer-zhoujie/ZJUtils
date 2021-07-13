@@ -366,8 +366,7 @@ public class CircleProgressBar extends View {
     }
 
     @Override
-    public void draw(Canvas canvas) {
-        super.draw(canvas);
+    protected void onDraw(Canvas canvas) {
         if (h != -1 && w != -1 && progressCircleRect != null) {
             canvas.save();
             canvas.rotate(startAngle, getCirclePivotX(), getCirclePivotY());
